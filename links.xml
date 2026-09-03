@@ -9,9 +9,10 @@
 <links>
 
   <category name="News">
-    <link url="https://www.bbc.com/news">BBC News</link>
-    <link url="https://www.theguardian.com">The Guardian</link>
-    <link url="https://www.reuters.com">Reuters</link>
+    <link url="https://instapundit.com">Instapundit</link>
+    <link url="https://ace.mu.nu/">Ace of Spades HQ</link>
+    <link url="https://www.dailysignal.com">The Daily Signal</link>
+    <link url="https://nypost.com">New York Post</link>
     <link url="https://apnews.com">Associated Press</link>
     <link url="https://www.aljazeera.com">Al Jazeera</link>
     <link url="https://www.rte.ie/news/">RTÉ News</link>
@@ -22,8 +23,8 @@
     <link url="https://www.dancarlin.com/hardcore-history-series/">Hardcore History</link>
     <link url="https://lexfridman.com/podcast/">Lex Fridman Podcast</link>
     <link url="https://99percentinvisible.org">99% Invisible</link>
-    <link url="https://radiolab.org">Radiolab</link>
-    <link url="https://www.thisamericanlife.org">This American Life</link>
+    <link url="https://www.ruthlesspodcast.com/">The Ruthless Podcast</link>
+    <link url="https://www.joerogan.com">The Joe Rogan Experience</link>
   </category>
 
   <category name="Tech">
@@ -37,7 +38,7 @@
 
   <category name="Space">
     <link url="https://www.nasa.gov">NASA</link>
-    <link url="https://www.esa.int">European Space Agency</link>
+    <link url="https://x.com/SpaceX">SpaceX on X</link>
     <link url="https://spaceflightnow.com">Spaceflight Now</link>
     <link url="https://www.nasaspaceflight.com">NASASpaceflight</link>
     <link url="https://www.planetary.org">The Planetary Society</link>
@@ -47,10 +48,10 @@
   <category name="Sport">
     <link url="https://www.bbc.com/sport">BBC Sport</link>
     <link url="https://www.skysports.com">Sky Sports</link>
-    <link url="https://theathletic.com">The Athletic</link>
     <link url="https://www.espn.com">ESPN</link>
-    <link url="https://www.theguardian.com/football">Guardian Football</link>
     <link url="https://www.rte.ie/sport/">RTÉ Sport</link>
+    <link url="https://www.bbc.com/sport/football/teams/wolverhampton-wanderers">Wolverhampton Wanderers (BBC Sport)</link>
+    <link url="https://www.hawthornfc.com.au/">Hawthorn FC (AFL)</link>
   </category>
 
 </links>
