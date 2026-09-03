@@ -87,7 +87,7 @@ def page(title, body):
 <body>
 <div class="blogTop">
 <h1 class="blogTitle"><a href="/">Backbyrner</a></h1>
-<span class="mainNavMenu"><a href="/blog/">blog</a> | about | <a href="/links">links</a></span>
+<span class="mainNavMenu"><a href="/blog/">blog</a> | <a href="/links">links</a></span>
 </div>
 <div class="blogWrap">
 {body}
