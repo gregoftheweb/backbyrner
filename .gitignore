@@ -1,6 +1,3 @@
-# Secrets — plaintext credentials, do not commit
-blogs/gonzo/siteSecurity.config
-
 # OS / editor cruft
 Thumbs.db
 .DS_Store

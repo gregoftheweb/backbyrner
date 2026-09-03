@@ -56,7 +56,7 @@ ARTICLES = ROOT / "articles"
 BLOG = ROOT / "blog"
 LINKS_XML = ROOT / "links.xml"
 LINKS = ROOT / "links"
-CSS = "/resources/css/style.css?v=4"
+CSS = "/resources/css/style.css?v=5"
 EXCERPT_WORDS = 100
 
 md = (
