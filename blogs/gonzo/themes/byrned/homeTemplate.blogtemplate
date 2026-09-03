@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title><%title%></title>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<meta name=ProgId content=VisualStudio.HTML>
+<meta name=Originator content="Microsoft Visual Studio .NET 7.1">
+<meta name="blogchalk" content="United States, Washington, Seattle, Eastgate, English, Spanish, Greg, Male, 36-40, skiing, coding" />
+
+<link rel="stylesheet" type="text/css" href="/blogs/gonzo/themes/byrned/base.css">
+<script language="javascript" src="/resources/js/menu.js"></script>
+<script language="javascript" src="/resources/js/pageformat.js"></script>
+</head>
+<body 
+	marginwidth="0" 
+	marginheight="0" 
+	topmargin="0" 
+	leftmargin="0" 
+	onload="SetGutterLines();"
+	onresize="SetGutterLines();"
+><a href="/default.aspx"><img src="/resources/images/backbyrner_header.png" /></a><table cellpadding="0" cellspacing="0" border="0" id="MainContentTable"  align="left">
+	<tr>
+		<td>			
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" ID="Table1"  align="left">
+				<tr>
+					<td colspan="2" width="185" rowspan="2">
+						<!--upper left hand corner content -->
+						<span class="ContentSmall">
+						<%newtelligence.loginbox ()%>
+						</span>
+					</td>
+					<td bgcolor="#dddddd"><img src="/resources/images/spacer.gif" border="0" width="1" height="20"></td>
+					<td colspan="2" width="*" rowspan="2" class="PadLeftClass">
+						<!--top above content area-->
+						
+												<br />						
+						<span class="description"><%description%></span> 
+						
+						
+					</td>
+				</tr>
+			
+				<tr>
+					<td bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="1" height="15"></td>
+				</tr>
+				<!--horizontal line-->
+				<tr>
+					<td bgcolor="#dddddd" width="145"><img src="/resources/images/spacer.gif" border="0" width="1" height="1"></td>
+					<td width="15" bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="15" height="1"></td>
+					<td width="1" bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="1" height="1"></td>
+					<td width="15" bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="35" height="1"></td>
+					<td bgcolor="#dddddd" width="*"><img src="/resources/images/spacer.gif" border="0" width="1" height="1" id="cellwidener"></td>
+				</tr>
+				<tr valign="top">
+					<td colspan="2" rowspan="3" style="PADDING-RIGHT:8px; PADDING-LEFT:3px; PADDING-BOTTOM:8px; PADDING-TOP:8px"  class="ContentMain">
+						<!--left hand navigation and links table-->
+						
+						<%rssLink%>|<%atomLink%>|<%cdfLink%>
+						
+							<hr />
+							
+							<span class="ContentSmall">
+								<b>Search Blog</b>
+							</span>
+							<%newtelligence.search()%>
+							
+							
+							<hr />
+							
+								<%radio.weblog.drawcalendar ()%>
+			
+				<hr />
+							
+	<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="TitleVertBoxedHeader">
+        <span class="LinkByCategoryHeader">Recent Posts</span>
+
+      </td>
+    </tr>
+    <tr>
+      <td background="/resources/images/background_list.gif" class="TitleVertBoxed">
+      <div class="LinkByCategoryBold">
+       			<%titleList(24)%> 
+      </div>
+      </td>
+    </tr>
+  </table>				
+  
+							
+								<hr />
+							
+		<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="TitleVertBoxedHeader">
+        <span class="LinkByCategoryHeader">Blog Roll</span>
+
+      </td>
+    </tr>
+    <tr>
+      <td background="/resources/images/background_list.gif" class="TitleVertBoxed">
+      <div class="LinkByCategoryBold">
+       	<%radio.macros.blogroll ("siteConfig/blogroll.opml")%> 
+      </div>
+      </td>
+    </tr>
+  </table>				
+							
+
+							
+							
+								<hr />
+						
+			
+				
+					<script type="text/javascript" src="http://embed.technorati.com/embed/w6jww58r69.js"></script>
+					
+							<hr />
+							
+							<!-- START OF BLOGCHALKING CODE --><p style="font-size: 5pt; color: #000000; font-family: verdana"><a href="http://www.blogchalking.tk" target="bc"><img src="http://www.entrementes.net/blogchalking/chalk2i.gif" width="35" height="30" border="0" alt="Greg/Male/36-40. Lives in United States/Washington/Seattle/Eastgate, speaks English and Spanish. Spends 80% of daytime online. Uses a Faster (1M+) connection. And likes skiing/coding." title="Greg/Male/36-40. Lives in United States/Washington/Seattle/Eastgate, speaks English and Spanish. Spends 80% of daytime online. Uses a Faster (1M+) connection. And likes skiing/coding." /></a><br><b>This is my blogchalk:<br>United States, Washington, Seattle, Eastgate, English, Spanish, Greg, Male, 36-40, skiing, coding.</b></p><!-- END OF BLOGCHALKING CODE -->
+							
+							
+		
+						
+					</td>
+					<td bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="1" height="35"></td>
+					<td colspan="2" rowspan="3" style="PADDING:8px" class="ContentMain">
+						<!--Main content box -->
+					<%newtelligence.adminBar()%>
+					
+					<%bodytext%> 
+					
+					</td>				
+				</tr>
+				
+				
+				
+				<!--rest of vertical line only-->
+				<tr>
+					<td bgcolor="#dddddd"><img src="/resources/images/spacer.gif" border="0" width="1" id="cellstretcher"></td>
+				
+				</tr>
+				<!--blue coming up from bottom bar-->
+				<tr>
+					<td bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="1" height="35"></td>
+				</tr>
+				<!--bottom horizontal line-->
+				<tr>
+					<td bgcolor="#dddddd" width="145"><img src="/resources/images/spacer.gif" border="0" width="1" height="1"></td>
+					<td width="15" bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="15" height="1"></td>
+					<td width="1" bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="1" height="1"></td>
+					<td width="15" bgcolor="#000066"><img src="/resources/images/spacer.gif" border="0" width="15" height="1"></td>
+					<td bgcolor="#dddddd" width="*"><img src="/resources/images/spacer.gif" border="0" width="1" height="1" id="Img1"></td>
+				</tr>
+				
+			</table>
+			
+			<img src="/resources/images/spacer.gif" border="0" width="1" height="35">
+			
+		</td>
+	</tr>
+</table>
+
+<!--main top bar-->
+<div class='Titlebar'><a href="default.aspx"><div align='right'>Blog</div></a></div><div class='Titlebarshadow' ><div align='right'>Blog</div></div><div class='Titlebargray' ><div align='right'>Blog</div></div><div class='Titlebarcornerright'><div align='right'>Blog</div></div><div class='Titlebarcornerleft' ><div align='right'>Blog</div></div>
+
+<%newtelligence.aspnetcontrol("themes/byrned/backbyrnercontrols/NavBar.ascx")%>
+
+</body>
+</html>
+
+
