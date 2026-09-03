@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """
-Backbyrner blog preprocessor.
+Backbyrner site preprocessor.
 
-Reads Markdown files from  articles/*.md  and writes flat HTML into  blog/ :
+Blog: reads Markdown from  articles/*.md  and writes flat HTML into  blog/ :
   - blog/<slug>.html   one styled page per article
   - blog/index.html    the article list (title + date + ~100-word excerpt)
 
-On GitHub Pages the deploy workflow runs this automatically -- pushing the .md
-is the publish step -- so `blog/` is generated output and is git-ignored. You
-can still run it locally to preview:
+Links: reads  links.xml  and writes  links/index.html  -- one bordered,
+translucent card per <category>, listing its <link>s.
+
+On GitHub Pages the deploy workflow runs this automatically -- pushing the
+source file is the publish step -- so `blog/` and `links/` are generated output
+and are git-ignored. You can still run it locally to preview:
 
     python3 build.py
 
@@ -35,6 +38,7 @@ Dependency: markdown-it-py  (Arch: `sudo pacman -S python-markdown-it-py`)
 import html
 import re
 import sys
+import xml.etree.ElementTree as ET
 from datetime import date, datetime
 from pathlib import Path
 
@@ -50,6 +54,8 @@ except ModuleNotFoundError:
 ROOT = Path(__file__).resolve().parent
 ARTICLES = ROOT / "articles"
 BLOG = ROOT / "blog"
+LINKS_XML = ROOT / "links.xml"
+LINKS = ROOT / "links"
 CSS = "/resources/css/style.css?v=4"
 EXCERPT_WORDS = 100
 
@@ -147,7 +153,7 @@ def excerpt(rendered_html):
     return " ".join(words[:EXCERPT_WORDS]) + "…"
 
 
-def build():
+def build_blog():
     if not ARTICLES.is_dir():
         sys.exit(f"no articles directory at {ARTICLES}")
     BLOG.mkdir(exist_ok=True)
@@ -206,6 +212,50 @@ def build():
             print(f"  removed blog/{stale.name}")
 
     print(f"built {len(posts)} article(s)")
+
+
+def build_links():
+    if not LINKS_XML.exists():
+        print("no links.xml, skipping links/")
+        return
+
+    root = ET.parse(LINKS_XML).getroot()
+    cards = []
+    n_links = 0
+    for cat in root.findall("category"):
+        name = (cat.get("name") or "").strip()
+        rows = []
+        for ln in cat.findall("link"):
+            url = (ln.get("url") or "").strip()
+            label = (ln.text or "").strip() or url
+            if not url:
+                continue
+            rows.append(
+                f'<li><a href="{html.escape(url, quote=True)}" '
+                f'target="_blank" rel="noopener">{html.escape(label)}</a></li>'
+            )
+        if not rows:
+            continue
+        n_links += len(rows)
+        cards.append(
+            '<section class="linkCat">\n'
+            f'<h2>{html.escape(name)}</h2>\n'
+            f'<ul>\n{chr(10).join(rows)}\n</ul>\n'
+            '</section>'
+        )
+
+    body = (
+        f'<div class="linkGrid">\n{chr(10).join(cards)}\n</div>\n'
+        if cards else '<div class="blogPanel"><p>No links yet.</p></div>\n'
+    )
+    LINKS.mkdir(exist_ok=True)
+    (LINKS / "index.html").write_text(page("Links", body), encoding="utf-8")
+    print(f"  links/index.html  ({len(cards)} categories, {n_links} links)")
+
+
+def build():
+    build_blog()
+    build_links()
 
 
 if __name__ == "__main__":

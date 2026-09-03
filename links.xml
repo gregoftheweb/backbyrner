@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Backbyrner links page.
+
+  Edit this file, then commit and push - build.py turns it into /links/.
+  Categories render in the order they appear here, and so do the links inside
+  each one. To add a link:  <link url="https://example.com">Label</link>
+-->
+<links>
+
+  <category name="News">
+    <link url="https://www.bbc.com/news">BBC News</link>
+    <link url="https://www.theguardian.com">The Guardian</link>
+    <link url="https://www.reuters.com">Reuters</link>
+    <link url="https://apnews.com">Associated Press</link>
+    <link url="https://www.aljazeera.com">Al Jazeera</link>
+    <link url="https://www.rte.ie/news/">RTÉ News</link>
+  </category>
+
+  <category name="Podcasts">
+    <link url="https://therestishistory.com">The Rest Is History</link>
+    <link url="https://www.dancarlin.com/hardcore-history-series/">Hardcore History</link>
+    <link url="https://lexfridman.com/podcast/">Lex Fridman Podcast</link>
+    <link url="https://99percentinvisible.org">99% Invisible</link>
+    <link url="https://radiolab.org">Radiolab</link>
+    <link url="https://www.thisamericanlife.org">This American Life</link>
+  </category>
+
+  <category name="Tech">
+    <link url="https://news.ycombinator.com">Hacker News</link>
+    <link url="https://arstechnica.com">Ars Technica</link>
+    <link url="https://www.theverge.com">The Verge</link>
+    <link url="https://simonwillison.net">Simon Willison's Weblog</link>
+    <link url="https://lobste.rs">Lobsters</link>
+    <link url="https://lwn.net">LWN.net</link>
+  </category>
+
+  <category name="Space">
+    <link url="https://www.nasa.gov">NASA</link>
+    <link url="https://www.esa.int">European Space Agency</link>
+    <link url="https://spaceflightnow.com">Spaceflight Now</link>
+    <link url="https://www.nasaspaceflight.com">NASASpaceflight</link>
+    <link url="https://www.planetary.org">The Planetary Society</link>
+    <link url="https://apod.nasa.gov/apod/astropix.html">Astronomy Picture of the Day</link>
+  </category>
+
+  <category name="Sport">
+    <link url="https://www.bbc.com/sport">BBC Sport</link>
+    <link url="https://www.skysports.com">Sky Sports</link>
+    <link url="https://theathletic.com">The Athletic</link>
+    <link url="https://www.espn.com">ESPN</link>
+    <link url="https://www.theguardian.com/football">Guardian Football</link>
+    <link url="https://www.rte.ie/sport/">RTÉ Sport</link>
+  </category>
+
+</links>

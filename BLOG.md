@@ -42,11 +42,22 @@ python3 -m http.server 8000 # then open http://localhost:8000/blog/
 
 `build.py` needs `markdown-it-py` (`sudo pacman -S python-markdown-it-py`).
 
+## Links page
+
+`/links/` is generated from `links.xml`. Add a link inside a `<category>`:
+
+```xml
+<link url="https://example.com">Label</link>
+```
+
+Categories and links render in document order. Commit, push, done.
+
 ## What generates what
 
 | Source | Output |
 |---|---|
 | `articles/*.md` | `blog/<slug>.html`, one per post |
 | all posts | `blog/index.html`, the list with 100-word excerpts |
+| `links.xml` | `links/index.html`, one card per category |
 | `build.py` | the generator; templates live inside it |
 | `.github/workflows/deploy.yml` | runs the build and deploys on every push |
