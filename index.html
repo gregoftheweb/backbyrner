@@ -3,7 +3,7 @@
 <head>
         <title>backbyrner.com</title>
         <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Rock+Salt|Montserrat" rel="stylesheet">
-        <link href="/resources/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/css/style.css?v=4" rel="stylesheet" type="text/css" />
         <link href="/resources/css/style2.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -12,21 +12,19 @@
         <div class="centerTitleOuter">
                 <span class="centerTitleInner">
                         <h1 class="superH1"><a href="/">Backbyrner</a></h1>
-                        <span class="mainNavMenu"><a href="/blog">blog</a> | about | <a href="/links">links</a></span>
+                        <span class="mainNavMenu"><a href="/blog/">blog</a> | about | <a href="/links">links</a></span>
 
                         <br />
                         <br />
 
-                        <form method="get" action="http://www.bing.com/search">
-                                <div class="group">
-                                        <input type="text" name="q" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>search bing</label>
-
-                                        <input type="image" name="submit" src="/resources/images/search_icon.png"
-                                                border="0" alt="Submit" class="imageLineSpacing" />
-                                </div>
+                        <form class="searchBox" method="get" action="https://grok.com/" target="_blank" rel="noopener">
+                                <input type="text" name="q" placeholder="Search&hellip;" required>
+                                <button type="submit" aria-label="Search">
+                                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                                <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2" />
+                                                <line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                </button>
                         </form>
                 </span>
         </div>
