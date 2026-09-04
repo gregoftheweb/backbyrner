@@ -20,6 +20,7 @@ Markdown file format (front matter is optional):
     ---
     title: My First Post
     date: 2026-09-02
+    author: Greg Byrne
     ---
 
     The body, in **Markdown**.
@@ -27,6 +28,8 @@ Markdown file format (front matter is optional):
 If `title` is missing it falls back to the first `# Heading`, then the slug.
 If `date` is missing it falls back to a `YYYY-MM-DD-` filename prefix, then the
 file's modification date. The slug is the filename minus any date prefix.
+`author` is optional -- when present it shows next to the date, otherwise the
+byline is simply omitted.
 
 Images: put them in  articles/assets/  and reference them from Markdown any way
 you like -- `![x](assets/x.png)`, `![x](x.png)` and `![x](/articles/assets/x.png)`
@@ -144,7 +147,9 @@ def parse(path):
     if not when:
         when = date.fromtimestamp(path.stat().st_mtime)
 
-    return {"slug": slug, "title": title, "date": when, "body": raw}
+    author = meta.get("author") or ""
+
+    return {"slug": slug, "title": title, "date": when, "author": author, "body": raw}
 
 
 def excerpt(rendered_html):
@@ -175,10 +180,13 @@ def build_blog():
             lambda m: m.group(1) + fix_img_src(m.group(2)) + m.group(3), rendered
         )
         post["excerpt"] = excerpt(rendered)
+        meta_line = f'{post["date"]:%B %-d, %Y}'
+        if post["author"]:
+            meta_line += f' &middot; {html.escape(post["author"])}'
         article = (
             f'<article class="articleBody">\n'
             f'<h1>{html.escape(post["title"])}</h1>\n'
-            f'<div class="articleMeta">{post["date"]:%B %-d, %Y}</div>\n'
+            f'<div class="articleMeta">{meta_line}</div>\n'
             f'{rendered}\n'
             f'<div><a class="backLink" href="/blog/">&larr; all articles</a></div>\n'
             f'</article>\n'
@@ -189,11 +197,14 @@ def build_blog():
 
     items = []
     for post in posts:
+        entry_date = f'{post["date"]:%B %-d, %Y}'
+        if post["author"]:
+            entry_date += f' &middot; {html.escape(post["author"])}'
         items.append(
             '<li>\n'
             f'<div class="entryTitle"><a href="/blog/{post["slug"]}.html">'
             f'{html.escape(post["title"])}</a>'
-            f'<span class="entryDate">{post["date"]:%B %-d, %Y}</span></div>\n'
+            f'<span class="entryDate">{entry_date}</span></div>\n'
             f'<p class="entryExcerpt">{html.escape(post["excerpt"])}</p>\n'
             '</li>'
         )
