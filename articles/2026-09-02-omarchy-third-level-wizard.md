@@ -2,6 +2,15 @@
 title: "Omarchy, or: Notes From a Third-Level Wizard"
 date: 2026-09-02
 ---
+---
+
+title: Omarchy - A Revelation  as an OS
+
+date: 2026-09-03
+
+author: Greg O'Byrne
+
+---
 
 I just watched David Heinemeier Hansson talk to Lex Fridman for five hours.
 Five. Hours. And the whole time I kept thinking: this guy is just like me.
@@ -49,9 +58,9 @@ dissolving.
 And then there is what you build on top of it. Off the top of my head, lately:
 
 - A **Lode Runner** plugin, because why should a game not live in my window
-  manager
+manager
 - A replacement for **Typora** — my own Markdown editor, and honestly it suits
-  how I work better than the thing it replaced. I'm writing this in it.
+how I work better than the thing it replaced. I'm writing this in it.
 - A **speedometer** app for my phone
 
 None of these took a weekend. They took an evening, or an afternoon, or a prompt
