@@ -109,15 +109,22 @@ def page(title, body):
 def parse(path):
     raw = path.read_text(encoding="utf-8")
     meta = {}
-    m = FRONT_MATTER.match(raw)
-    if m:
+    # Consume every front-matter block stacked at the top of the file, so a
+    # stray duplicated header never leaks into the rendered body. When a key
+    # repeats across blocks the first non-empty value wins.
+    while True:
+        m = FRONT_MATTER.match(raw)
+        if not m:
+            break
         for line in m.group(1).splitlines():
             if ":" in line:
                 k, _, v = line.partition(":")
+                k = k.strip().lower()
                 v = v.strip()
                 if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
                     v = v[1:-1]
-                meta[k.strip().lower()] = v
+                if v and k not in meta:
+                    meta[k] = v
         raw = raw[m.end():]
 
     stem = path.stem

@@ -1,16 +1,7 @@
 ---
 title: The Star Trek Arithmetic
 date: 2026-09-04
-author: Greg Byrne
----
----
-
-title: The Star Trek Arithmetic
-
-date: 2026-09-04
-
 author: Greg O'Byrne
-
 ---
 
 Somewhere between "AI takes all the jobs" and "AI makes everyone rich" sits a

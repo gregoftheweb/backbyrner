@@ -1,15 +1,7 @@
 ---
 title: "Omarchy, or: Notes From a Third-Level Wizard"
 date: 2026-09-02
----
----
-
-title: Omarchy - A Revelation  as an OS
-
-date: 2026-09-03
-
 author: Greg O'Byrne
-
 ---
 
 I just watched David Heinemeier Hansson talk to Lex Fridman for five hours.
